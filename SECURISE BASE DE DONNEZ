@@ -1,0 +1,64 @@
+
+SECURISE BASE DE DONNEZ
+Cette image décrit différents composants et mesures de sécurité pour protéger une base de données (BD) et une application contre les attaques informatiques. Voici une explication détaillée de chaque élément et terme :
+
+    Utilisateur avec une icône souriante : Représente l'utilisateur final ou le client qui interagit avec l'application. Il est essentiel que l'identité de l'utilisateur soit vérifiée pour assurer la sécurité.
+
+    Authentification : C'est le processus de vérification de l'identité de l'utilisateur, souvent à travers un nom d'utilisateur et un mot de passe. Cela peut aussi inclure des méthodes plus avancées comme l'authentification multifacteur.
+
+    Application : C'est le logiciel par lequel l'utilisateur interagit avec la base de données. L'application doit être sécurisée pour empêcher les exploitations malveillantes.
+
+    Sécurisation des applications : Il s'agit des pratiques et des techniques utilisées pour rendre une application résistante aux attaques, telles que la validation des entrées, le codage sécurisé et la gestion des erreurs.
+
+    Chiffrement des communications : Cela signifie que les données échangées entre l'application et la base de données sont cryptées pour prévenir l'interception et la lecture par des tiers non autorisés.
+
+    SGBD (Système de Gestion de Base de Données) : C'est le logiciel qui permet de créer, de manipuler et de gérer les bases de données. Il joue un rôle crucial dans la sécurisation des accès à la base de données.
+
+    Contrôle d’accès : Cela se réfère aux mécanismes qui déterminent qui peut accéder à quelles informations dans une base de données. Il s'agit de s'assurer que seuls les utilisateurs autorisés ont l'accès à des données spécifiques.
+
+    Contrôle d’inference : C'est une mesure de sécurité qui vise à prévenir la déduction d'informations secrètes à partir des données accessibles. Cela implique souvent des techniques complexes pour éviter que les schémas de données ne révèlent des informations sensibles.
+
+    Audit : Cela se réfère à l'examen et à l'analyse des activités et des transactions effectuées dans la base de données pour s'assurer qu'elles sont conformes aux politiques de sécurité et pour détecter les comportements suspects.
+
+    Chiffrement des données : C'est la transformation des données de la base de données en un format illisible sans clé de déchiffrement appropriée. Cela protège les données au repos contre le vol ou l'exposition non autorisée.
+
+    BD (Base de Données) : C'est l'emplacement où les données sont stockées. Les bases de données peuvent contenir des informations sensibles et sont souvent la cible d'attaques.
+
+En résumé, cette image décrit un système de sécurité informatique intégré visant à protéger à la fois les applications et les bases de données. Elle souligne l'importance de l'authentification de l'utilisateur, la sécurisation des applications, le chiffrement des communications, et divers contrôles et audits au niveau du SGBD pour sécuriser les données.
+
+plus en plus fonctionnement et l'interaction et toutes les informations
+
+
+L'image illustre un cadre de sécurité informatique qui protège une base de données (BD) des attaques externes ou internes, en établissant plusieurs couches de défense. Voici un regard approfondi sur le fonctionnement et l'interaction entre les composants de ce système :
+1. Utilisateur
+
+L'utilisateur est le point de départ de l'interaction avec le système. Il est le destinataire final des informations de la base de données et celui qui fait les requêtes à travers l'application.
+2. Authentification
+
+Avant que l'utilisateur ne puisse interagir avec l'application, il doit être authentifié. Cette étape sert à confirmer que l'utilisateur est bien qui il prétend être. Cette vérification peut prendre plusieurs formes, comme un mot de passe, un jeton d'authentification, une empreinte digitale, ou une vérification en deux étapes.
+3. Application
+
+Une fois authentifié, l'utilisateur interagit avec la base de données via l'application. L'application agit comme un intermédiaire qui formule les requêtes de l'utilisateur en commandes que le SGBD peut comprendre et exécuter.
+4. Sécurisation des applications
+
+La sécurisation de l'application implique de s'assurer que l'application elle-même n'a pas de vulnérabilités qui pourraient être exploitées. Ceci comprend le codage sécurisé pour éviter les injections SQL, la cross-site scripting (XSS), et autres attaques web courantes.
+5. Chiffrement des communications
+
+Toutes les données qui transitent entre l'application et le SGBD sont chiffrées pour empêcher leur interception. Cela inclut l'utilisation de protocoles sécurisés comme TLS/SSL pour chiffrer les sessions de communication.
+6. Système de Gestion de Base de Données (SGBD)
+
+Le SGBD est responsable de l'accès aux données stockées dans la BD. Il interprète les commandes envoyées par l'application et exécute les opérations de base de données telles que lire, écrire, mettre à jour ou supprimer des données.
+7. Contrôle d’accès et d’inférence
+
+Le contrôle d'accès dans le SGBD assure que seuls les utilisateurs autorisés peuvent accéder à certaines données. En complément, le contrôle d'inférence empêche les utilisateurs de déduire des informations sensibles à partir des données qu'ils peuvent voir.
+8. Audit
+
+Un système d'audit est en place pour enregistrer toutes les actions effectuées sur la base de données. Ceci est crucial pour la responsabilité et pour détecter des activités anormales ou malveillantes.
+9. Chiffrement des données
+
+Même au repos, les données dans la BD sont chiffrées. Cela signifie que si les données sont dérobées, elles resteraient inutilisables sans la clé de chiffrement correspondante.
+Interaction globale
+
+Dans une interaction typique, l'utilisateur s'authentifie à l'application, qui a été sécurisée pour empêcher les attaques. Les demandes de l'utilisateur sont transformées par l'application en requêtes pour le SGBD, qui accède à la BD après des vérifications de sécurité. Toutes les communications entre l'application et le SGBD sont chiffrées pour prévenir les écoutes. Les actions sur la BD sont surveillées par le système d'audit, et les contrôles d'accès garantissent que les utilisateurs ne voient que les données autorisées. Si une donnée est extraite de la BD, elle est chiffrée et doit être déchiffrée avant d'être utilisable.
+
+En résumé, l'image présente un écosystème de sécurité où chaque élément travaille de concert pour protéger les informations contre les attaques et assurer que seuls les utilisateurs autorisés peuvent accéder aux données correctes.
